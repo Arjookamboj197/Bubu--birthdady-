@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Amar ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 15px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 25px;
+      padding: 30px 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    button {
+      border: none;
+      padding: 13px 25px;
+      border-radius: 30px;
+      background: #fff;
+      color: #e75480;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    /* PASSWORD */
+    #mainPage {
+      display: none;
+    }
+
+    input {
+      width: 90%;
+      max-width: 280px;
+      padding: 13px;
+      border: none;
+      border-radius: 25px;
+      text-align: center;
+      font-size: 16px;
+      outline: none;
+      margin-top: 15px;
+    }
+
+    .error {
+      color: #fff;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* HEARTS */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear forwards;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* PHOTOS */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 3px solid rgba(255,255,255,0.7);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .message {
+      margin-top: 25px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .love {
+      font-size: 25px;
+      margin-top: 20px;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cake {
+      font-size: 70px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PASSWORD PAGE -->
+  <section class="page" id="passwordPage">
+    <div class="card">
+      <div class="cake">🎂</div>
+
+      <h1>A Little Surprise ❤️</h1>
+
+      <p>
+        This little surprise is only for someone<br>
+        very special to me. 🥹❤️
+      </p>
+
+      <input
+        type="1909"
+        id="1909"
+        placeholder="Enter secret password"
+      >
+
+      <br>
+
+      <button onclick="unlock()">Open My Surprise 💌</button>
+
+      <p class="error" id="error">
+        Wrong password 🥺 Try again ❤️
+      </p>
+    </div>
+  </section>
+
+
+  <!-- MAIN BIRTHDAY PAGE -->
+  <section class="page" id="mainPage">
+    <div class="card">
+
+      <div class="cake">🎂</div>
+
+      <h1>Happy Birthday ❤️</h1>
+
+      <h2>Amar 🥹🫶🏻</h2>
+
+      <p>
+        To the most special person in my life...
+        <br>
+        Today is all about you. ❤️
+      </p>
+
+
+      <!-- PHOTO GALLERY -->
+      <h2>Our Memories 📸</h2>
+
+      <div class="gallery">
+
+        <!-- Change these photo names if needed -->
+        <img src="photos/photo1.jpg" alt="Memory 1">
+        <img src="photos/photo2.jpg" alt="Memory 2">
+        <img src="photos/photo3.jpg" alt="Memory 3">
+        <img src="photos/photo4.jpg" alt="Memory 4">
+        <img src="photos/photo5.jpg" alt="Memory 5">
+        <img src="photos/photo6.jpg" alt="Memory 6">
+
+      </div>
+
+
+      <!-- LOVE MESSAGE -->
+      <div class="message">
+
+        <h2>For You ❤️</h2>
+
+        <p>
+          Happy Birthday to the person who makes my world
+          a little more beautiful every day. 🥹❤️
+          <br><br>
+
+          Thank you for being there, for making me smile,
+          and for giving me so many beautiful memories. 🫶🏻
+          <br><br>
+
+          I hope this new year of your life brings you
+          happiness, success, peace and everything
+          your heart wishes for. ✨
+          <br><br>
+
+          No matter what happens,
+          I will always cherish the moments we share. ❤️
+        </p>
+
+        <div class="love">
+          I Love You ❤️🥹🫶🏻
+        </div>
+
+      </div>
+
+
+      <button onclick="showWish()">
+        One More Surprise 💌
+      </button>
+
+      <div id="finalWish" class="message hidden">
+
+        <h2>My Final Wish 🎀</h2>
+
+        <p>
+          May your smile always stay the same,
+          may all your dreams come true,
+          and may you always have reasons to be happy. ❤️
+          <br><br>
+
+          Happy Birthday once again, my love. 🎂❤️
+          <br><br>
+
+          You are very special to me. 🥹🫶🏻
+        </p>
+
+        <div class="love">
+          Forever & Always ❤️
+        </div>
+
+      </div>
+
+      <div class="footer">
+        Made with ❤️ just for you
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- OPTIONAL BACKGROUND MUSIC -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <script>
+
+    /*
+      ============================
+      PASSWORD
+      ============================
+
+      Change "1907" to whatever
+      password you want.
+    */
+
+    const correctPassword = "1907";
+
+
+    function unlock() {
+
+      const enteredPassword =
+        document.getElementById("password").value;
+
+      const error =
+        document.getElementById("error");
+
+      if (enteredPassword === correctPassword) {
+
+        document.getElementById("passwordPage")
+          .style.display = "none";
+
+        document.getElementById("mainPage")
+          .style.display = "flex";
+
+        document.body.style.overflowX = "hidden";
+
+        startHearts();
+
+        const music =
+          document.getElementById("music");
+
+        music.play().catch(() => {});
+
+      } else {
+
+        error.style.display = "block";
+
+      }
+    }
+
+
+    /*
+      ============================
+      FINAL SURPRISE
+      ============================
+    */
+
+    function showWish() {
+
+      document.getElementById("finalWish")
+        .classList.remove("hidden");
+
+      startHearts();
+
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+    }
+
+
+    /*
+      ============================
+      FLOATING HEARTS
+      ============================
+    */
+
+    function createHeart() {
+
+      const heart =
+        document.createElement("div");
+
+      heart.className = "heart";
+
+      const hearts = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💘",
+        "🥹",
+        "🫶🏻"
+      ];
+
+      heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+      heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+
+    function startHearts() {
+
+      setInterval(createHeart, 500);
+
+    }
+
+  </script>
+
+</body>
+</html>
